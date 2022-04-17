@@ -1,7 +1,9 @@
-package com.fullcycle.catalogo.video.domain;
+package com.fullcycle.CatalogoVideo.domain;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import com.fullcycle.catalogo.video.domain.Category;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
