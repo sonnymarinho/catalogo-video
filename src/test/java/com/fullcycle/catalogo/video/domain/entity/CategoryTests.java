@@ -1,11 +1,14 @@
-package com.fullcycle.catalogo.video.domain;
+package com.fullcycle.catalogo.video.domain.entity;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import com.fullcycle.catalogo.video.domain.exception.NotBlankException;
+import com.fullcycle.catalogo.video.domain.exception.NotEmptyException;
+import com.fullcycle.catalogo.video.domain.exception.NotNullException;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -76,8 +79,16 @@ public class CategoryTests {
     @Test
     @DisplayName("it should not be able to create a category with a null name")
     public void createAndThrow() {
-        assertThrows(IllegalArgumentException.class, () -> {
+        assertThrows(NotNullException.class, () -> {
             new Category(null, "description");
+        });
+
+        assertThrows(NotEmptyException.class, () -> {
+            new Category("", "description");
+        });
+
+        assertThrows(NotBlankException.class, () -> {
+            new Category(" ", "description");
         });
     }
 

@@ -2,6 +2,10 @@ package com.fullcycle.catalogo.video.domain;
 
 import java.util.UUID;
 
+import com.fullcycle.catalogo.video.domain.exception.NotBlankException;
+import com.fullcycle.catalogo.video.domain.exception.NotEmptyException;
+import com.fullcycle.catalogo.video.domain.exception.NotNullException;
+
 public class Category {
     private UUID id;
     private String name;
@@ -33,13 +37,13 @@ public class Category {
     public void setName(String name) {
 
         if (name == null)
-            throw new IllegalArgumentException("name cannot be null");
+            throw new NotNullException("name cannot be null");
 
         if (name.isEmpty())
-            throw new IllegalArgumentException("name cannot be empty");
+            throw new NotEmptyException("name cannot be empty");
 
         if (name.isBlank())
-            throw new IllegalArgumentException("name cannot be blank");
+            throw new NotBlankException("name cannot be blank");
 
         this.name = name;
     }
@@ -58,7 +62,7 @@ public class Category {
 
     private void setIsActive(Boolean isActive) {
         if (isActive == null)
-            throw new IllegalArgumentException("isActive cannot be null");
+            throw new NotNullException("isActive cannot be null");
 
         if (isActive)
             this.activate();
