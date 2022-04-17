@@ -34,8 +34,10 @@ public class Category {
 
         if (name == null)
             throw new IllegalArgumentException("name cannot be null");
+
         if (name.isEmpty())
             throw new IllegalArgumentException("name cannot be empty");
+
         if (name.isBlank())
             throw new IllegalArgumentException("name cannot be blank");
 
@@ -54,8 +56,14 @@ public class Category {
         return this.isActive;
     }
 
-    public void setIsActive(Boolean isActive) {
-        this.isActive = isActive;
+    private void setIsActive(Boolean isActive) {
+        if (isActive == null)
+            throw new IllegalArgumentException("isActive cannot be null");
+
+        if (isActive)
+            this.activate();
+        else
+            this.deactivate();
     }
 
     public Boolean activate() {
@@ -64,5 +72,16 @@ public class Category {
 
     public Boolean deactivate() {
         return this.isActive = false;
+    }
+
+    public void update(String name, String description, Boolean isActive) {
+        setName(name);
+        setDescription(description);
+        setIsActive(isActive);
+    }
+
+    public void update(String name, String description) {
+        setName(name);
+        setDescription(description);
     }
 }
