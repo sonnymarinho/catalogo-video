@@ -1,6 +1,5 @@
 package com.fullcycle.catalogo.video.application.category;
 
-import com.fullcycle.catalogo.video.domain.application.usecase.category.find.all.FindAllCategoryUseCase;
 import com.fullcycle.catalogo.video.domain.application.usecase.category.find.by.id.FindCategoryByIdUseCase;
 import com.fullcycle.catalogo.video.domain.entity.Category;
 import com.fullcycle.catalogo.video.domain.repository.ICategoryRepository;
@@ -13,10 +12,8 @@ import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Optional;
-import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)

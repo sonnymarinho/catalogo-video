@@ -57,7 +57,7 @@ public class CategoryTests {
         assertEquals(category.getName(), "name");
         assertEquals(category.getDescription(), "description");
 
-        assertTrue(category.getIsActive());
+        assertTrue(category.isActive());
     }
 
     @Test
@@ -73,7 +73,7 @@ public class CategoryTests {
         assertEquals(category.getName(), "name");
         assertEquals(category.getDescription(), "description");
 
-        assertFalse(category.getIsActive());
+        assertFalse(category.isActive());
     }
 
     @Test
@@ -103,7 +103,7 @@ public class CategoryTests {
 
         assertEquals(category.getName(), "name 2");
         assertEquals(category.getDescription(), "description 2");
-        assertTrue(category.getIsActive());
+        assertTrue(category.isActive());
     }
 
     @Test
@@ -117,7 +117,7 @@ public class CategoryTests {
 
         assertEquals(category.getName(), "name 2");
         assertEquals(category.getDescription(), "description 2");
-        assertFalse(category.getIsActive());
+        assertFalse(category.isActive());
     }
 
 }

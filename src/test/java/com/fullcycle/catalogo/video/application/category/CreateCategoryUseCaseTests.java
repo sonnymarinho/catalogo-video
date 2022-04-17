@@ -46,7 +46,7 @@ public class CreateCategoryUseCaseTests {
         CreateCategoryInputData input = new CreateCategoryInputData(
                 category.getName(),
                 category.getDescription(),
-                category.getIsActive());
+                category.isActive());
 
         CategoryOutputData output = useCase.execute(input);
         repository.create(category);

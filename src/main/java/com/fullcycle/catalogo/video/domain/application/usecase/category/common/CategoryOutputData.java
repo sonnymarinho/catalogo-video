@@ -22,6 +22,6 @@ public class CategoryOutputData {
                 created.getId(),
                 created.getName(),
                 created.getDescription(),
-                created.getIsActive());
+                created.isActive());
     }
 }
