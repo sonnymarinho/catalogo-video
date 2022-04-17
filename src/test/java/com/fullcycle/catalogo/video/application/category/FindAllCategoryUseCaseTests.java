@@ -41,7 +41,6 @@ public class FindAllCategoryUseCaseTests {
         when(repository.findAll()).thenReturn(categories);
 
         var resultFound = repository.findAll();
-
         var useCaseResult = useCase.execute();
 
         assertThat(resultFound).isNotNull();
@@ -50,5 +49,20 @@ public class FindAllCategoryUseCaseTests {
 
         assertThat(useCaseResult).isNotNull();
         assertThat(useCaseResult).hasSize(3);
+    }
+
+    @Test
+    @DisplayName("it should be able to return an empty list when there is no category")
+    public void executeReturnAnEmptyList() {
+        List<Category> categories = List.of();
+
+        when(repository.findAll()).thenReturn(categories);
+
+        var useCaseResult = useCase.execute();
+
+        assertThat(useCaseResult).isNotNull();
+        assertThat(useCaseResult).hasSize(0);
+
+        verify(repository, times(1)).findAll();
     }
 }
