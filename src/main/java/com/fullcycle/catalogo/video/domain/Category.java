@@ -1,4 +1,4 @@
-package com.fullcycle.catalogo-video.domain;
+package com.fullcycle.catalogo.video.domain;
 
 import java.util.UUID;
 

@@ -1,4 +1,4 @@
-package com.fullcycle.catalogo-video;
+package com.fullcycle.catalogo.video;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
