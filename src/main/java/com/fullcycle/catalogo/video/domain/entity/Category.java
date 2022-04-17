@@ -1,4 +1,4 @@
-package com.fullcycle.catalogo.video.domain;
+package com.fullcycle.catalogo.video.domain.entity;
 
 import java.util.UUID;
 
@@ -16,10 +16,19 @@ public class Category {
         this(UUID.randomUUID(), name, description);
     }
 
+    public Category(String name, String description, Boolean isActive) {
+        this(UUID.randomUUID(), name, description, isActive);
+    }
+
     public Category(UUID id, String name, String description) {
+        this(id, name, description, true);
+    }
+
+    public Category(UUID id, String name, String description, Boolean isActive) {
         setId(id);
         setName(name);
-        this.description = description;
+        setDescription(description);
+        setIsActive(isActive);
     }
 
     public UUID getId() {
