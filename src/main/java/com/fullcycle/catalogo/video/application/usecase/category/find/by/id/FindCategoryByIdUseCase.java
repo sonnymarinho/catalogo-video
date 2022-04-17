@@ -1,7 +1,7 @@
-package com.fullcycle.catalogo.video.domain.application.usecase.category.find.by.id;
+package com.fullcycle.catalogo.video.application.usecase.category.find.by.id;
 
-import com.fullcycle.catalogo.video.domain.application.exception.NotFoundException;
-import com.fullcycle.catalogo.video.domain.application.usecase.category.common.CategoryOutputData;
+import com.fullcycle.catalogo.video.application.exception.NotFoundException;
+import com.fullcycle.catalogo.video.application.usecase.category.common.CategoryOutputData;
 import com.fullcycle.catalogo.video.domain.repository.ICategoryRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

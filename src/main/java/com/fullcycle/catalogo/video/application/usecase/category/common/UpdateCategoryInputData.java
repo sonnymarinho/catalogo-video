@@ -1,4 +1,4 @@
-package com.fullcycle.catalogo.video.domain.application.usecase.category.create;
+package com.fullcycle.catalogo.video.application.usecase.category.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateCategoryInputData {
+public class UpdateCategoryInputData {
     private String name;
     private String description;
-    private Boolean isActive = true;
+    private boolean isActive;
 }

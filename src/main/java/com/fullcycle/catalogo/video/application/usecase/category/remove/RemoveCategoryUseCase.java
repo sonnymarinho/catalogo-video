@@ -1,4 +1,4 @@
-package com.fullcycle.catalogo.video.domain.application.usecase.category.remove;
+package com.fullcycle.catalogo.video.application.usecase.category.remove;
 
 import com.fullcycle.catalogo.video.domain.repository.ICategoryRepository;
 import lombok.AllArgsConstructor;

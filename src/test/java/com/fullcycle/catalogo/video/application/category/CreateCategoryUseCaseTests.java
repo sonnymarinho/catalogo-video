@@ -7,9 +7,9 @@ import static org.mockito.Mockito.verify;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.fullcycle.catalogo.video.domain.entity.Category;
-import com.fullcycle.catalogo.video.domain.application.usecase.category.common.CategoryOutputData;
-import com.fullcycle.catalogo.video.domain.application.usecase.category.create.CreateCategoryInputData;
-import com.fullcycle.catalogo.video.domain.application.usecase.category.create.CreateCategoryUseCase;
+import com.fullcycle.catalogo.video.application.usecase.category.common.CategoryOutputData;
+import com.fullcycle.catalogo.video.application.usecase.category.create.CreateCategoryInputData;
+import com.fullcycle.catalogo.video.application.usecase.category.create.CreateCategoryUseCase;
 import com.fullcycle.catalogo.video.domain.repository.ICategoryRepository;
 
 import org.junit.jupiter.api.BeforeEach;

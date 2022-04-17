@@ -1,7 +1,7 @@
-package com.fullcycle.catalogo.video.domain.application.usecase.category.update;
+package com.fullcycle.catalogo.video.application.usecase.category.update;
 
-import com.fullcycle.catalogo.video.domain.application.exception.NotFoundException;
-import com.fullcycle.catalogo.video.domain.application.usecase.category.common.UpdateCategoryInputData;
+import com.fullcycle.catalogo.video.application.exception.NotFoundException;
+import com.fullcycle.catalogo.video.application.usecase.category.common.UpdateCategoryInputData;
 import com.fullcycle.catalogo.video.domain.repository.ICategoryRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

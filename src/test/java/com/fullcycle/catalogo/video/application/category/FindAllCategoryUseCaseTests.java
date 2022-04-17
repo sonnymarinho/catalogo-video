@@ -1,6 +1,6 @@
 package com.fullcycle.catalogo.video.application.category;
 
-import com.fullcycle.catalogo.video.domain.application.usecase.category.find.all.FindAllCategoryUseCase;
+import com.fullcycle.catalogo.video.application.usecase.category.find.all.FindAllCategoryUseCase;
 import com.fullcycle.catalogo.video.domain.entity.Category;
 import com.fullcycle.catalogo.video.domain.repository.ICategoryRepository;
 import org.junit.jupiter.api.BeforeEach;

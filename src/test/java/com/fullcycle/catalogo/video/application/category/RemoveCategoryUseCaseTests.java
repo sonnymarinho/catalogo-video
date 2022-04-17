@@ -1,8 +1,7 @@
 package com.fullcycle.catalogo.video.application.category;
 
 
-import com.fullcycle.catalogo.video.domain.application.usecase.category.find.by.id.FindCategoryByIdUseCase;
-import com.fullcycle.catalogo.video.domain.application.usecase.category.remove.RemoveCategoryUseCase;
+import com.fullcycle.catalogo.video.application.usecase.category.remove.RemoveCategoryUseCase;
 import com.fullcycle.catalogo.video.domain.repository.ICategoryRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

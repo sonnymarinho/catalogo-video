@@ -1,4 +1,4 @@
-package com.fullcycle.catalogo.video.domain.application.usecase.category.common;
+package com.fullcycle.catalogo.video.application.usecase.category.common;
 
 import java.util.UUID;
 

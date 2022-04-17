@@ -1,11 +1,36 @@
 version: "3.7"
 
 services:
-  app:
-    build: .
-    ports: 
-      - 8080:8080
-    volumes: 
-      - ./:/app
-    working_dir: /app
-    command: ./gradlew bootRun
+    
+#  app:
+#    build: .
+#    ports: 
+#      - 8080:8080
+#    volumes: 
+#      - ./:/app
+#    working_dir: /app
+#    command: ./gradlew bootRun
+#    depends_on:
+#      - db
+    
+  db:
+      image: mysql:5.7
+      container_name: catalogo-videos-mysql
+      ports:
+        - 3306:3306
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=catalogo_video
+        - MYSQL_USER=app
+        - MYSQL_PASSWORD=app
+      security_opt:
+        - seccomp:unconfined
+      volumes:
+        - ~/.docker/volumes/db:/var/lib/mysql
+      networks:
+        - catalogo_video
+      command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+networks:
+  
+  catalogo_video:

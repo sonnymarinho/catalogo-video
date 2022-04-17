@@ -1,6 +1,6 @@
-package com.fullcycle.catalogo.video.domain.application.usecase.category.create;
+package com.fullcycle.catalogo.video.application.usecase.category.create;
 
-import com.fullcycle.catalogo.video.domain.application.usecase.category.common.CategoryOutputData;
+import com.fullcycle.catalogo.video.application.usecase.category.common.CategoryOutputData;
 import com.fullcycle.catalogo.video.domain.entity.Category;
 import com.fullcycle.catalogo.video.domain.repository.ICategoryRepository;
 

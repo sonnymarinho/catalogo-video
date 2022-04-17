@@ -1,4 +1,4 @@
-package com.fullcycle.catalogo.video.domain.application.exception;
+package com.fullcycle.catalogo.video.application.exception;
 
 public class ApplicationException extends RuntimeException {
     
