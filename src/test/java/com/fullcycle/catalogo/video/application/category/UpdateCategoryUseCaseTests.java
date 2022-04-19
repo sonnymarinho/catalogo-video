@@ -46,7 +46,7 @@ public class UpdateCategoryUseCaseTests {
         doNothing().when(repository).update(existentCategory);
         when(repository.findById(existentCategory.getId())).thenReturn(Optional.of(existentCategory));
 
-        assertFalse(existentCategory.isActive());
+        assertFalse(existentCategory.getIsActive());
         assertThat(existentCategory.getName()).isEqualTo("existent name");
         assertThat(existentCategory.getDescription()).isEqualTo("existent description");
 
@@ -54,7 +54,7 @@ public class UpdateCategoryUseCaseTests {
 
         assertThat(existentCategory.getName()).isEqualTo(updateInputData.getName());
         assertThat(existentCategory.getDescription()).isEqualTo(updateInputData.getDescription());
-        assertThat(existentCategory.isActive()).isEqualTo(updateInputData.isActive());
+        assertThat(existentCategory.getIsActive()).isEqualTo(updateInputData.isActive());
 
         verify(repository, times(1)).update(existentCategory);
         verify(repository, times(1)).findById(existentCategory.getId());

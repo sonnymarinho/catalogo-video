@@ -65,7 +65,7 @@ public class Category {
         this.description = description;
     }
 
-    public Boolean isActive() {
+    public Boolean getIsActive() {
         return this.isActive;
     }
 
